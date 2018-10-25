@@ -14,7 +14,7 @@ regressionObject = RegressionBasics()
 dataStorage = DataStorage()
 
 # import data from pc and set up different matrices
-regressionObject.loadData("mlr03.xls",dataStorage)
+regressionObject.loadAndPrepareData("mlr03.xls",dataStorage)
 
 #compute the cost of our hypothesis
 #cost = regressionObject.computeCost(dataStorage)
@@ -24,7 +24,7 @@ regressionObject.loadData("mlr03.xls",dataStorage)
 regressionObject.gradientDescent(dataStorage, 0.000003)
 
 print("error")
-print(regressionObject.computeCost(dataStorage))    
+print(regressionObject.computeCost(dataStorage))
 print(dataStorage.thetaVector)
 
 dataSave = SaveData("theta.txt","w")

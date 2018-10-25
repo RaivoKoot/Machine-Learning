@@ -7,10 +7,8 @@ Created on Fri Oct 12 12:22:08 2018
 import numpy as np
 
 class DataStorage:
-    expectedOutputVector = None
-    featureMatrix = None
-    thetaVector = None
-    
+
     def __init__(self, thetaRows = 1):
         self.thetaVector = np.zeros((thetaRows, 1))
-    
+        self.featureMatrix = None
+        self.expectedOutputVector = None
